@@ -1,0 +1,334 @@
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text */
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+  background-color: #1a1a1a;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+}
+
+.nav__logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: #f1f1f1;
+}
+
+.nav {
+  float: right;
+}
+
+.nav__links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav__links li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.nav__links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav__links a:hover {
+  color: #888888;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background: url('creative-geometric-design-space_53876-89781.jpg') center/cover no-repeat;
+  padding: 20px;
+}
+
+.home__content {
+  width: 50%;
+}
+
+.home__content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  color: #f1f1f1;
+  font-weight: 700;
+}
+
+.home__content h2 {
+  font-size: 36px;
+  color: #bbbbbb;
+  margin-bottom: 20px;
+}
+
+.home__content p {
+  font-size: 18px;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.home__image {
+  width: 40%;
+}
+
+.profile__image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #333333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Button */
+.button {
+  background-color: #333333;
+  color: #f1f1f1;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button:hover {
+  background-color: #555555;
+}
+
+/* About Section */
+.about {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #1a1a1a;
+}
+
+.section__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #f1f1f1;
+}
+
+.about__description {
+  font-size: 18px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #cccccc;
+  line-height: 1.8;
+}
+
+/* Skills Section */
+.skills {
+  padding: 100px 0;
+  text-align: center;
+  background-color: #121212;
+}
+
+.skills__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.skills__list li {
+  margin: 10px 20px;
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+/* Projects Section */
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0;
+  background-color: #1a1a1a;
+  min-height: 100vh; /* Ensures it takes full viewport height */
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: center; /* Centers the grid content */
+  align-items: center; /* Vertically centers the grid content */
+}
+
+.project__item {
+  padding: 20px;
+  background-color: #333333;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.project__item:hover {
+  transform: scale(1.05);
+}
+
+.project__item h3 {
+  font-size: 24px;
+  color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.project__item p {
+  color: #cccccc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .projects__grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects__grid {
+      grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
+
+
+/* Contact Section */
+.contact {
+  padding: 100px 0;
+  background-color: #121212;
+  text-align: center;
+}
+
+.contact__input, .contact__textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  color: #f1f1f1;
+  font-size: 16px;
+}
+
+.contact__form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  padding: 30px 0;
+  text-align: center;
+  border-top: 2px solid #333333;
+}
+
+.footer__social a {
+  color: #f1f1f1;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+/* Animation for the home text */
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0; /* Start invisible */
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1; /* End visible */
+  }
+}
+
+/* Apply animation to the home text */
+.home__content h1 {
+  font-size: 48px; /* Adjust as needed */
+  color: #f1f1f1;
+  animation: slideIn 1s ease forwards; /* Animation properties */
+  animation-delay: 0.5s; /* Delay before the animation starts */
+}
+
+.home__content h2 {
+  font-size: 32px; /* Adjust as needed */
+  color: #e0e0e0;
+  animation: slideIn 1s ease forwards;
+  animation-delay: 0.7s; /* Slight delay for the subheading */
+}
+/* Animation for the button */
+@keyframes bounceIn {
+  0% {
+      transform: translateY(30px); /* Start slightly below */
+      opacity: 0; /* Start invisible */
+  }
+  50% {
+      transform: translateY(-10px); /* Move up */
+      opacity: 1; /* Fully visible */
+  }
+  100% {
+      transform: translateY(0); /* Return to original position */
+  }
+}
+
+/* Apply animation to the button */
+.button {
+  background-color: #ff5722; /* Button color */
+  color: #ffffff; /* Text color */
+  border: none; /* No border */
+  padding: 15px 30px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Font size */
+  cursor: pointer; /* Pointer on hover */
+  animation: bounceIn 1s ease forwards; /* Animation properties */
+  animation-delay: 1s; /* Delay before the animation starts */
+}
+/* Animation for the floating effect */
+@keyframes float {
+  0% {
+      transform: translateY(0); /* Start at the original position */
+  }
+  50% {
+      transform: translateY(-10px); /* Move up */
+  }
+  100% {
+      transform: translateY(0); /* Return to the original position */
+  }
+}
+
+/* Apply animation to the button */
+.button {
+  background-color: #ff5722; /* Button color */
+  color: #ffffff; /* Text color */
+  border: none; /* No border */
+  padding: 15px 30px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 18px; /* Font size */
+  cursor: pointer; /* Pointer on hover */
+  animation: float 2s ease-in-out infinite; /* Animation properties */
+}
