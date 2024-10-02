@@ -1,0 +1,26 @@
+// Get the lightbox modal
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.getElementsByClassName("close")[0];
+
+// Add event listeners to project images
+const projectImages = document.querySelectorAll(".project-image");
+
+projectImages.forEach(image => {
+    image.addEventListener("click", function() {
+        lightbox.style.display = "flex";
+        lightboxImg.src = this.getAttribute("data-full");
+    });
+});
+
+// Close the modal when the user clicks the close button
+closeBtn.onclick = function() {
+    lightbox.style.display = "none";
+};
+
+// Close the modal when the user clicks anywhere outside of the image
+window.onclick = function(event) {
+    if (event.target === lightbox) {
+        lightbox.style.display = "none";
+    }
+};

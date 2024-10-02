@@ -1,0 +1,227 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #111;
+  color: #f0f0f0;
+  text-align: center; /* Center all text in body */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ff6347;
+  font-weight: bold;
+}
+
+section {
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Homepage */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #222;
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image-section {
+  flex: 0 0 200px;
+  margin-right: 2em;
+}
+
+.profile-picture {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #ff6347;
+}
+
+.text-section {
+  flex: 1;
+  color: #fff;
+}
+
+.text-section h1 {
+  font-size: 3em;
+  color: #ff6347;
+}
+
+.text-section p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+/* About Section */
+#about {
+  background-color: #1b1b1b;
+  padding: 40px;
+}
+
+#about h2 {
+  color: #ff6347;
+  font-size: 2.5em;
+}
+
+#about p {
+  color: #f0f0f0;
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+/* Skills Section */
+#skills {
+  padding: 40px;
+  background-color: #1b1b1b;
+}
+
+#skills h2 {
+  color: #ff6347;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+#skills .skills-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures the items wrap on smaller screens */
+  justify-content: center; /* Centers the skill items horizontally */
+  gap: 20px; /* Adds space between the skill items */
+}
+
+#skills .skill-item {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-align: center;
+  flex: 1 1 200px; /* Makes each item responsive */
+  max-width: 250px; /* Ensures each skill box doesn't get too wide */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#skills .skill-item:hover {
+  transform: scale(1.05); /* Adds a hover effect to the skill boxes */
+}
+/* Skills Section */
+#skills ul {
+  list-style-type: none; /* Removes the default bullet points */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
+}
+
+#skills ul li {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#skills ul li:hover {
+  transform: scale(1.05);
+}
+
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  #skills .skills-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+
+/* Portfolio Section */
+.project {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.project img {
+  max-width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.project img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox Modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.lightbox .close:hover,
+.lightbox .close:focus {
+  color: #ff6347;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .home-content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .image-section {
+      margin-right: 0;
+      margin-bottom: 1em;
+  }
+}
